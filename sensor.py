@@ -95,7 +95,7 @@ def process_client_packet(pkt):
 
 def process_access_point_packet(pkt):
     sig_strength = get_signal_strength(pkt)
-    db_insert_access_point(pkt.addr2, pkt.info, signal_strength, datetime.now())
+    db_insert_access_point(pkt.addr2, pkt.info, sig_strength, datetime.now())
 
 def main():
     open_db_connection()
